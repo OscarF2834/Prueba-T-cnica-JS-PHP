@@ -1,0 +1,59 @@
+body {
+  background-size: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: center;
+}
+
+/* Oscurece ligeramente para mejorar contraste y que se vea un poco estetico */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(1, 170, 221, 0.8);
+  z-index: -1;
+}
+
+
+.franja-titulo {
+  background-color: #28a745; /* Verde */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.input-group input {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-group button {
+  border-radius: 0 4px 4px 0;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+}
+
+.tarea .texto {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 0.95rem;
+}
+
+.tarea.completada .texto {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.list-group-item {
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #e9ecef;
+}
